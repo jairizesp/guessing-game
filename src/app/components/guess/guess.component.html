@@ -1,0 +1,19 @@
+<div class="flex flex-col gap-4">
+  <div class="flex gap-4 items-center">
+    <label for="guess_number">Guess Number</label>
+    <input
+      class="p-2 border border-slate-600 rounded-md"
+      type="number"
+      id="guess_number"
+      placeholder="Enter maximum number"
+      [(ngModel)]="guessed"
+    />
+  </div>
+  <button
+    [disabled]="is_max_attempt || is_answer_correct ? true : false"
+    class="border border-slate-600 bg-slate-600 text-white px-4 py-2 rounded-md hover:bg-black w-full md:max-w-xs"
+    (click)="guessNumber()"
+  >
+    Guess
+  </button>
+</div>
